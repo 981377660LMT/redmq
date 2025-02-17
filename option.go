@@ -3,6 +3,8 @@ package redmq
 import "time"
 
 type ProducerOptions struct {
+	// topic 可以缓存的消息长度，单位：条.
+	// 当消息条数超过此数值时，会把老消息踢出队列
 	msgQueueLen int
 }
 
